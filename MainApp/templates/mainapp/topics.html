@@ -8,14 +8,14 @@
 
   <p>Topics</p>
 
-  <!--In standard HTML, a bulleted list is called an unordered list 
+  <!--In standard HTML, a bulleted list is called an unordered list
     and is indicated by the tags <ul></ul>. -->
   <ul class="list-group border-bottom pb-2 mb-4">
       <!-- for loop to loop through each topic
        NOTE: not like python, needs a endfor -->
-     {% for topic in topics %}
+     {% for topic in all_topics %}
 
-     <!-- To print a variable in a template, wrap the 
+     <!-- To print a variable in a template, wrap the
         variable name in double braces. -->
       <li class="list-group-item border-0">
         <a href="{% url 'MainApp:topic' topic.id %}">
