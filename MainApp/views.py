@@ -45,7 +45,7 @@ def new_topic(request):
             return redirect('MainApp:topics')
 
     context = {'form': form}
-    return render(request, 'MainApp/new_topic.html', context)
+    return render(request, 'mainapp/new_topic.html', context)
 
 @login_required
 def new_entry(request, topic_id):
@@ -67,7 +67,7 @@ def new_entry(request, topic_id):
             return redirect('MainApp:topic', topic_id=topic_id)
 
     context = {'topic': topic, 'form': form}
-    return render(request, 'MainApp/new_entry.html', context)
+    return render(request, 'mainapp/new_entry.html', context)
 
 
 @login_required
@@ -89,7 +89,7 @@ def edit_entry(request, entry_id):
             return redirect('MainApp:topic', topic_id=topic.id)
 
     context = {'entry': entry, 'topic': topic, 'form': form}
-    return render(request, 'MainApp/edit_entry.html', context)
+    return render(request, 'mainapp/edit_entry.html', context)
 
 
 
